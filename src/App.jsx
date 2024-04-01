@@ -1,17 +1,15 @@
-// rename the file App.jsx
-// delete the React import
 import { createRoot } from "react-dom/client";
-import Pet from "./components/Pet";
-
-// delete the Pet component
+// import Pet from "./components/Pet";
+import SearchParams from "./components/SearchParams";
 
 const App = () => {
   return (
     <div>
       <h1>Adopt Me!</h1>
-      <Pet name="Luna" animal="dog" breed="Havanese" />
+      {/* <Pet name="Luna" animal="dog" breed="Havanese" />
       <Pet name="Pepper" animal="bird" breed="Cockatiel" />
-      <Pet name="Doink" animal="cat" breed="Mix" />
+      <Pet name="Doink" animal="cat" breed="Mix" /> */}
+      <SearchParams />
     </div>
   );
 };
