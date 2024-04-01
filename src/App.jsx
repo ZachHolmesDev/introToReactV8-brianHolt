@@ -1,29 +1,21 @@
-import React from "react";
-// import ReactDOM from "react-dom";
-import { createRoot } from "react-dom";
+// rename the file App.jsx
+// delete the React import
+import { createRoot } from "react-dom/client";
+import Pet from "./components/Pet";
 
-const Pet = (props) => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, props.animal),
-    React.createElement("h1", {}, props.name),
-    React.createElement("h1", {}, props.breed),
-  ]);
-};
+// delete the Pet component
 
 const App = () => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, "Adopt Me!!!"),
-    React.createElement(Pet, {
-      animal: "Dog",
-      name: "Luna",
-      breed: "Labrador",
-    }),
-    React.createElement(Pet),
-    React.createElement(Pet),
-  ]);
+  return (
+    <div>
+      <h1>Adopt Me!</h1>
+      <Pet name="Luna" animal="dog" breed="Havanese" />
+      <Pet name="Pepper" animal="bird" breed="Cockatiel" />
+      <Pet name="Doink" animal="cat" breed="Mix" />
+    </div>
+  );
 };
 
 const container = document.getElementById("root");
-// const root = ReactDOM.createRoot(container);
 const root = createRoot(container);
-root.render(React.createElement(App));
+root.render(<App />);
